@@ -1,0 +1,9 @@
+
+tasks:
+  - command: "cd && npm install -g --unsafe-perm node-red node-red-node-watson node-red-contrib-line-messaging-api && mkdir .node-red && ln -s /workspace/nld/flow.json ./.node-red && node-red flows.json"
+
+    name: Node-RED
+# Ports to expose on workspace startup (optional)
+ports:
+  - port: 1880
+    onOpen: notify
